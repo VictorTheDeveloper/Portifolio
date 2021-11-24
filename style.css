@@ -157,7 +157,7 @@ header{
     text-transform: uppercase;
     background: #b9232377;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #f08935, #c024247e);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to left, #f09f35, #c05524); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to left, #f7d0a0, #794605); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     padding-top: 1rem;
     padding-bottom: 1rem;
     padding-left: 2rem;
@@ -182,7 +182,7 @@ header{
     top: 0;
     right: -20rem;
     transition: all 1s;
-    
+    z-index: 99;
 }
 
 .show-menu .sidebar{
@@ -238,41 +238,56 @@ header{
     color: rgb(255, 123, 0);
 }
 
+.sessao-conhecimentos{
+    background-color: rgb(240, 240, 240);
+}
+
+.sessao-header{
+    margin-bottom: 3rem;
+}
+
 .conhecimentos{
     display: grid;
     grid-template-columns: repeat(16, 1fr);
     grid-template-rows: repeat(6, 6rem);
     grid-row: .5rem;
+    background-color: rgb(240, 240, 240);
 }
 
 .conhecimento:nth-child(1){
     grid-column: 4 / 7;
-    grid-row: 2 / 4;
+    grid-row: 1 / 3;
 }
 
 .conhecimento:nth-child(2){
     grid-column: 3 / 6;
-    grid-row: 4 / 6;
+    grid-row: 3 / 5;
 }
 
 .conhecimento:nth-child(3){
     grid-column: 4 / 7;
-    grid-row: 6 / -1;
+    grid-row: 5 / -1;
 }
 
 .conhecimento:nth-child(4){
     grid-column: 12 / 14;
-    grid-row: 2 / 4;
+    grid-row: 1 / 3;
 }
 
 .conhecimento:nth-child(5){
     grid-column: 13 / 15;
-    grid-row: 4 / 6;
+    grid-row: 3 / 5;
 }
 
 .conhecimento:nth-child(6){
-    grid-column: 12 / 14;
-    grid-row: 6 / -1;
+    grid-column: 12 / 15;
+    grid-row: 5 / -1;
+    
+}
+
+.espaco{
+    margin-bottom: 1rem;
+    background-color: rgb(240, 240, 240);
 }
 
 .sessao-header{
@@ -292,6 +307,7 @@ header{
 .conhecimento-header{
     display: flex;
     align-items: center;
+    
 }
 
 .conhecimento-header i{
@@ -309,7 +325,7 @@ header{
 
 .conhecimentos-img-wrapper{
     grid-column: 7 / 11;
-    grid-row: 3 / 5;
+    grid-row: 2 / 5;
     width: 100%;
 }
 
@@ -340,13 +356,16 @@ header{
     width: 100%;
     height: 100%;
     border-radius: .5rem;
+    
 }
 
 .card-info{
     text-align: center;
     bottom: 0;
     padding: 2rem;
+    opacity: 0;
     text-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.466);
+    border: solid 2px black;
 }
 
 .card-info h2{
@@ -360,4 +379,26 @@ header{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: bolder;
     color: rgb(0, 0, 0);
+}
+
+.card-info p{
+    margin-bottom: .5rem;
+}
+
+.card-info button{
+        width: 8rem;
+        height: 2rem;
+        background: #ffffffce;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #ffffff, #ffffff);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to left, #f8e5d0, #aa6a16); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        border-radius: .6rem;
+        font-size: 1rem;
+        font-family: sans;
+        box-shadow: 0 .1rem .8rem rgba(0, 0, 0, 0.411);
+}
+
+.card:hover .card-info{
+        bottom: 2rem;
+        opacity: 1;
+        visibility: visible;
 }
