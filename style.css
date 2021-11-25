@@ -510,4 +510,70 @@ header{
     height: 100vh;
     background: url("imagens/raposaggg.jpg");
     object-fit: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.orcamento-wrapper{
+    width: 70%;
+    height: 80%;
+    background-color: white;
+    opacity: .4;
+    border-radius: 10px;
+    box-shadow: 0 0.1rem 0.3rem rgba(32, 32, 32, 0.603);
+    position: relative;
+}
+
+.sessao-orcamento h1{
+    position: absolute;
+    top: -2.5rem;
+    left: 2rem;
+    background: #ffffffce;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ffffff, #ffffff);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #fabd77, #f7a131); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding: 0 3rem;
+    color:rgb(0, 0, 0);
+    font-family: sans;
+    font-size: 3rem;
+    font-weight: lighter;
+    box-shadow: 0 0.1rem 0.3rem rgba(39, 39, 39, 0.671);
+    border-radius: .3rem;
+}
+
+.sessao-orcamento form{
+    margin: 4rem;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 2rem;
+    row-gap: 2rem;
+}
+
+.sessao-orcamento label{
+    font-family: sans;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.orcamento-wrapper:hover{
+    opacity: 1;
+}
+
+.sessao-orcamento input[type="number"]{
+    font-family: sans;
+    width: 3rem;
+    font-size: 2rem;
+    outline: none;
+    border-radius: .5rem;
+    padding: 0.3rem;
+}
+
+.btn-orcamento{
+    text-transform: uppercase;
+    padding: 1rem;
+    cursor: pointer;
+    grid-column: 2;
+    background: #ffffffce;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ffffff, #ffffff);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #fabd77, #f7a131); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
